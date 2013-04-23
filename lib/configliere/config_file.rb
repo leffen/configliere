@@ -52,8 +52,10 @@ module Configliere
       new_data = YAML.load(yaml_str) || {}
       # Extract the :env (production/development/etc)
       if options[:env]
-        new_data = new_data[options[:env]] || {}
+        new_data = new_data["defaults"] if new_data.has_key?("defaults")    # use defaults as start point if exists
+        new_data = new_data.merge(new_data[options[:env]]) if new_data.has_key?(options[:env])
       end
+
       deep_merge! new_data
       self
     end
