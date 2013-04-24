@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 $: << File.dirname(__FILE__)+'/../lib'
-require 'configliere'
+require 'leffen_configliere'
 
 puts "This is a demo of Configliere in a simple script."
 Settings.use :commandline

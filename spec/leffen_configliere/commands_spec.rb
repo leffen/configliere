@@ -1,5 +1,5 @@
 require File.expand_path('../spec_helper', File.dirname(__FILE__))
-require 'configliere/commands'
+require 'leffen_configliere/commands'
 
 describe Configliere::Commands do
 

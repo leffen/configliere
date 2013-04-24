@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 $: << File.dirname(__FILE__)+"/../lib"
-require 'configliere'
+require 'leffen_configliere'
 Settings.use :commandline
 
 Settings.define :logfile, :type => String,     :description => "Log file name", :default => 'myapp.log', :required => false

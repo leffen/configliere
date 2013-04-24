@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 $: << File.dirname(__FILE__)+'/../lib'
-require 'configliere'
+require 'leffen_configliere'
 
 Settings.use :env_var, :commandline
 Settings.define :underpants, :env_var => 'UNDERPANTS', :default => "boxers"
@@ -21,6 +21,6 @@ puts %Q{Using
 * the default setting of:   #{Settings.definition_of(:underpants, :default).inspect}
 * the environment variable: #{ENV['UNDERPANTS'].inspect}
 * the commandline setting:  #{ARGV.grep(/^--underpants/).inspect}
-your configliere advises that
+your leffen_configliere advises that
   #{Settings.inspect}
 }

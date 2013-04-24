@@ -1,3 +1,7 @@
+h2. Version 0.4.19
+
+* Added support for defaults in yml settings files
+
 h2. Version 0.4.10
 
 Minor improvement to the sub-command (git-style) module. Still not great.

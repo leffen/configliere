@@ -1,10 +1,10 @@
 require 'date'                      # type conversion
 require 'time'                      # type conversion
 require 'fileutils'                 # so save! can mkdir
-require 'configliere/deep_hash'     # magic hash for params
-require 'configliere/param'         # params container
-require 'configliere/define'        # define param behavior
-require 'configliere/config_file'   # read / save! files
+require 'leffen_configliere/deep_hash'     # magic hash for params
+require 'leffen_configliere/param'         # params container
+require 'leffen_configliere/define'        # define param behavior
+require 'leffen_configliere/config_file'   # read / save! files
 
 # use(:encrypted) will bring in 'digest/sha2' and 'openssl'
 # use(:prompt)    will bring in 'highline', which you must gem install
@@ -17,7 +17,7 @@ module Configliere
   def self.use *mixins
     mixins = ALL_MIXINS if mixins.include?(:all) || mixins.empty?
     mixins.each do |mixin|
-      require "configliere/#{mixin}"
+      require "leffen_configliere/#{mixin}"
     end
   end
 

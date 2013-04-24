@@ -16,7 +16,7 @@ module Configliere
   require "base64"
 
   #
-  # Encrypt and decrypt values in configliere stores
+  # Encrypt and decrypt values in leffen_configliere stores
   #
   module Crypter
     CIPHER_TYPE = "aes-256-cbc" unless defined?(CIPHER_TYPE)

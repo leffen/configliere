@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 $: << File.dirname(__FILE__)+'/../lib'
-require 'configliere'
+require 'leffen_configliere'
 
 Settings.use :commandline, :prompt
 Settings.define :underpants, :description => 'boxers or briefs'
@@ -12,7 +12,7 @@ If you call this with a value for --underpants, you will not see a prompt
 }
 
 puts %Q{Using the commandline setting #{ARGV.grep(/^--underpants/).inspect}
-your configliere advises that the settings are
+your leffen_configliere advises that the settings are
   #{Settings.inspect}
 }
 

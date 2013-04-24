@@ -24,7 +24,7 @@ module Configliere
     # @return [Configliere::Params] the Settings object
     #
     # @example
-    #     # Read from ~/.configliere/foo.yaml
+    #     # Read from ~/.leffen_configliere/foo.yaml
     #     Settings.read(foo.yaml)
     #
     # @example
@@ -52,8 +52,12 @@ module Configliere
       new_data = YAML.load(yaml_str) || {}
       # Extract the :env (production/development/etc)
       if options[:env]
-        new_data = new_data["defaults"] if new_data.has_key?("defaults")    # use defaults as start point if exists
-        new_data = new_data.merge(new_data[options[:env]]) if new_data.has_key?(options[:env])
+        if new_data.has_key?("defaults")
+          new_data = new_data["defaults"]   # use defaults as start point if exists
+          new_data = new_data.merge(new_data[options[:env]]) if new_data.has_key?(options[:env])
+        else
+          new_data = new_data[options[:env]] || {}
+        end
       end
 
       deep_merge! new_data
@@ -76,7 +80,7 @@ module Configliere
 
     # save to disk.
     # * file is in YAML format, as a hash of handle => param_hash pairs
-    # * filename defaults to Configliere::DEFAULT_CONFIG_FILE (~/.configliere, probably)
+    # * filename defaults to Configliere::DEFAULT_CONFIG_FILE (~/.leffen_configliere, probably)
     def save! filename
       filename = expand_filename(filename)
       hsh = self.export.to_hash

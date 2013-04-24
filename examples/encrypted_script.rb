@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 $: << File.dirname(__FILE__)+'/../lib'
-require 'configliere'
+require 'leffen_configliere'
 DUMP_FILENAME = '/tmp/encrypted_script.yml'
 
 #

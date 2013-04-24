@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem   'multi_json',  ">= 1.1"
 
+
 # Only necessary if you want to use Configliere::Prompt
 gem   'highline',    ">= 1.5.2", :require => false
 gem   'jruby-openssl',           :platform => [:jruby] if RUBY_PLATFORM =~ /java/

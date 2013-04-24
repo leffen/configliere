@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 $: << File.dirname(__FILE__)+'/../lib'
-require 'configliere'
+require 'leffen_configliere'
 
 class Wolfman
   attr_accessor :config

@@ -1,4 +1,4 @@
-require 'configliere/crypter'
+require 'leffen_configliere/crypter'
 module Configliere
   module EncryptedParam
 

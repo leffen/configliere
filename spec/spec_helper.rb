@@ -57,4 +57,4 @@ RSpec.configure do |config|
 
 end
 
-require 'configliere'
+require 'leffen_configliere'

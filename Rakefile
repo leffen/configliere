@@ -25,8 +25,8 @@ end
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   Bundler.setup(:default, :development, :test)
-  gem.name        = 'configliere'
-  gem.homepage    = 'https://github.com/infochimps-labs/configliere'
+  gem.name        = 'leffen_configliere'
+  gem.homepage    = 'https://github.com/leffen/leffen_configliere.git'
   gem.license     = 'Apache 2.0'
   gem.email       = 'coders@infochimps.org'
   gem.authors     = ['Infochimps']
@@ -37,7 +37,7 @@ You\'ve got a script. It\'s got some settings. Some settings are for this module
 
    "" So, Consigliere of mine, I think you should tell your Don what everyone knows. "" -- Don Corleone
 
-Configliere manage settings from many sources: static constants, simple config files, environment variables, commandline options, straight ruby. You don't have to predefine anything, but you can ask configliere to type-convert, require, document or password-obscure any of its fields. Modules can define config settings independently of each other and the main program.
+Configliere manage settings from many sources: static constants, simple config files, environment variables, commandline options, straight ruby. You don't have to predefine anything, but you can ask leffen_configliere to type-convert, require, document or password-obscure any of its fields. Modules can define config settings independently of each other and the main program.
 EOF
 
   gem.executables = []

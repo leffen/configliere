@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "leffen_configliere"
-  s.version = "0.4.18a"
+  s.version = "0.4.19"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Infochimps"]
-  s.date = "2012-12-05"
+  s.date = "2013-04-23"
   s.description = "You've got a script. It's got some settings. Some settings are for this module, some are for that module. Most of them don't change. Except on your laptop, where the paths are different.  Or when you're in production mode. Or when you're testing from the command line.\n\n   \"\" So, Consigliere of mine, I think you should tell your Don what everyone knows. \"\" -- Don Corleone\n\nConfigliere manage settings from many sources: static constants, simple config files, environment variables, commandline options, straight ruby. You don't have to predefine anything, but you can ask leffen_configliere to type-convert, require, document or password-obscure any of its fields. Modules can define config settings independently of each other and the main program.\n"
   s.email = "coders@infochimps.org"
   s.extra_rdoc_files = [
@@ -58,6 +58,7 @@ Gem::Specification.new do |s|
     "lib/leffen_configliere/param.rb",
     "lib/leffen_configliere/prompt.rb",
     "lib/leffen_configliere/vayacondios.rb",
+    "pom.xml",
     "spec/leffen_configliere/commandline_spec.rb",
     "spec/leffen_configliere/commands_spec.rb",
     "spec/leffen_configliere/config_block_spec.rb",
@@ -70,12 +71,14 @@ Gem::Specification.new do |s|
     "spec/leffen_configliere/prompt_spec.rb",
     "spec/configliere_spec.rb",
     "spec/spec.opts",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "src/main/java/com/infochimps/config/Configliere.java",
+    "src/main/java/com/infochimps/config/IntegrationTests.java"
   ]
-  s.homepage = "https://github.com/infochimps-labs/leffen_configliere"
+  s.homepage = "https://github.com/leffen/leffen_configliere.git"
   s.licenses = ["Apache 2.0"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.15"
+  s.rubygems_version = "1.8.25"
   s.summary = "Wise, discreet configuration management"
 
   if s.respond_to? :specification_version then
@@ -84,6 +87,11 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<multi_json>, [">= 1.1"])
       s.add_runtime_dependency(%q<highline>, [">= 1.5.2"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.1"])
+      s.add_development_dependency(%q<rake>, [">= 0"])
+      s.add_development_dependency(%q<yard>, [">= 0.7"])
+      s.add_development_dependency(%q<rspec>, [">= 2.8"])
+      s.add_development_dependency(%q<jeweler>, [">= 1.6"])
     else
       s.add_dependency(%q<multi_json>, [">= 1.1"])
       s.add_dependency(%q<highline>, [">= 1.5.2"])
